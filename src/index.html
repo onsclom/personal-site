@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Austin Merrick</title>
+    <link rel="stylesheet" href="/resources/style.css" />
+  </head>
+  <body>    
+    <main>
+      {{header}}
+      
+      <p>👋 Hi, I am <strong>Austin Merrick</strong>.</p>
+  
+      <ul>
+        <li>I enjoy software engineering, problem solving, and making things.</li>
+        <li>I am <span id="ageSpan">{calculating...}</span> years old.</li>
+        <script>
+          age = 0;
+          function updateAge() {
+            document.getElementById("ageSpan").innerHTML = (
+              new Date(new Date() - new Date("04/02/1998")) /
+              (1000 * 60 * 60 * 24) /
+              365
+            ).toFixed(9);
+          }
+          setInterval(updateAge, 16);
+        </script>
+      </ul>
+  
+      <p>
+        🕒 Check out what I am currently doing in my <a href="./now">now page</a>.
+      </p>
+  
+      <p>✍️ Read about my thoughts in my <a href="./writing">writing page</a>.</p>
+  
+      <p>
+        📚 Find interesting things in my <a href="./bookmarks">bookmarks page</a>.
+      </p>
+  
+      <p>
+        💾 Explore things I make in my <a href="./projects">projects page</a>.
+      </p>
+  
+      {{footer}}
+    </main>
+
+  </body>
+</html>

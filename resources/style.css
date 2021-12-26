@@ -1,0 +1,57 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 1rem;
+    width: 100%;
+    color: #555;
+    line-height: 1.5;
+}
+
+h1, h2, strong {
+    color: #333;
+}
+
+main {
+    margin: auto;
+    padding: 1rem;
+    max-width: 40rem;
+}
+
+img {
+    max-width: 100%;
+}
+
+code, pre {
+    background: #eee;
+    padding: .1rem;
+}
+
+.maze {
+    text-align: center;
+    line-height: .75rem;
+}
+
+blockquote {
+    border-left: 2px solid;
+    margin-left: 0;
+    padding-left: 2rem;
+}
+
+a {
+    color: #55a;
+    font-weight: bold;
+    text-decoration: none;
+}
+a::before {
+    content: "{"
+}
+a::after {
+    content: "}"
+}
+a[href*='//']::before{
+    content: "[";
+}
+a[href*='//']::after{
+    content: "]";
+}

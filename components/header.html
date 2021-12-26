@@ -1,0 +1,23 @@
+<p id="pathP"></p>
+<script>
+  let pathP = document.getElementById("pathP")
+  console.log(window.location.pathname)
+  let parts = window.location.pathname.split("/")
+  let curPath = ""
+  
+  let realParts = []
+  for (const part of parts) {
+    if (part!="" && part!="index.html")
+      realParts.push(part)
+  }
+
+  pathP.innerHTML += `<a href="/">~root</a> `
+  for (const part of realParts) {
+    curPath += "/"+part
+
+    if (part != realParts[realParts.length-1])
+      pathP.innerHTML += ` <a href="${curPath}"> /${part}</a> `
+    else
+      pathP.innerHTML += ` /${part}`
+  }
+</script>
