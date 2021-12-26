@@ -16,8 +16,8 @@
     curPath += "/"+part
 
     if (part != realParts[realParts.length-1])
-      pathP.innerHTML += ` <a href="${curPath}"> /${part}</a> `
+      pathP.innerHTML += `-> <a href="${curPath}">${part}</a> `
     else
-      pathP.innerHTML += ` /${part}`
+      pathP.innerHTML += `-> ${part}`
   }
 </script>

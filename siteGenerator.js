@@ -39,10 +39,13 @@ function recursivelyAddComponents(directory) {
         );
       }
 
-      //now add last updateds
+      let sourceHtmlPathParts = htmlFilePath.split("/");
+      sourceHtmlPathParts[1] = "src"
+      const sourceHtmlPath = sourceHtmlPathParts.join("/");
+      //now add last updated dates
       contents = contents.replace(
         `{{lastUpdated}}`,
-        date.format( fs.statSync(htmlFilePath).mtime, "MMM DD YYYY" )
+        date.format( fs.statSync(sourceHtmlPath).mtime, "MMM DD YYYY" )
       );
 
       fs.writeFileSync(htmlFilePath, contents);
