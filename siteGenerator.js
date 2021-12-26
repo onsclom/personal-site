@@ -23,6 +23,7 @@ fs.cpSync("./src", "./build", { recursive: true });
 
 // go through all of build and replace {{}} things with their corresponding components
 recursivelyAddComponents("./build");
+fs.cpSync('./resources', './build/resources', {recursive: true})
 
 function recursivelyAddComponents(directory) {
   let files = fs.readdirSync(directory, { withFileTypes: true });
